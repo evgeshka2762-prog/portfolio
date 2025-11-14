@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" type="image/svg+xml">
     <style>
         :root {
-            --dark-blue: #0a0e17;
-            --blue: #1a2332;
-            --accent-blue: #2d3b55;
-            --light-blue: #4a5f8a;
+            --dark-bg: #000000;
+            --section-bg: #0a0a0a;
+            --accent-bg: #111111;
+            --card-bg: #1a1a1a;
             --text: #ffffff;
+            --accent-color: #b22222;
+            --accent-bright: #ff0000;
             --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
@@ -35,7 +36,7 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text);
-            background-color: var(--dark-blue);
+            background-color: var(--dark-bg);
             overflow-x: hidden;
         }
 
@@ -57,7 +58,7 @@
 
         /* Header */
         header {
-            background: linear-gradient(rgba(10, 14, 23, 0.85), rgba(10, 14, 23, 0.9)), url('https://www.analytics8.com/wp-content/uploads/2023/09/Data_Governance_Tools_and_Practices_Analytics8.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url('https://wallpapers.com/images/hd/red-aesthetic-cherry-blossoms-o5rca5demurymw2e.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -75,11 +76,32 @@
             text-align: center;
         }
 
-        .header-content h1 {
+        .glowing-title {
             font-size: 4rem;
             margin-bottom: 1rem;
             opacity: 0;
             transform: translateY(30px);
+            position: relative;
+            display: inline-block;
+            color: var(--text);
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+            animation: glowPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(255, 0, 0, 0.6),
+                           0 0 40px rgba(255, 0, 0, 0.4),
+                           0 0 60px rgba(255, 0, 0, 0.3),
+                           0 0 80px rgba(255, 0, 0, 0.2);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(255, 0, 0, 0.9),
+                           0 0 50px rgba(255, 0, 0, 0.7),
+                           0 0 70px rgba(255, 0, 0, 0.5),
+                           0 0 90px rgba(255, 0, 0, 0.3),
+                           0 0 110px rgba(255, 0, 0, 0.1);
+            }
         }
 
         .header-content p {
@@ -117,11 +139,6 @@
             transform: translateY(-5px);
         }
 
-        /* Navigation - УБРАНА */
-        /* nav {
-            display: none;
-        } */
-
         /* Sections */
         .section-title {
             text-align: center;
@@ -133,6 +150,7 @@
             font-size: 3rem;
             display: inline-block;
             position: relative;
+            color: var(--text);
         }
 
         .section-title h2::after {
@@ -143,15 +161,12 @@
             transform: translateX(-50%);
             width: 100px;
             height: 3px;
-            background: var(--light-blue);
+            background: var(--accent-color);
         }
 
         /* About */
         .about-section {
-            background: linear-gradient(rgba(26, 35, 50, 0.9), rgba(26, 35, 50, 0.9)), url('https://i.pinimg.com/originals/e1/42/4d/e1424d64b5b36667aa15fe86f6424438.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: var(--section-bg);
         }
 
         .about-content {
@@ -165,14 +180,15 @@
             margin-bottom: 25px;
             font-size: 1.2rem;
             line-height: 1.8;
+            color: var(--text);
         }
 
         .salary-info {
-            background: var(--accent-blue);
+            background: var(--card-bg);
             padding: 25px;
             border-radius: 10px;
             margin: 30px 0;
-            border-left: 4px solid var(--light-blue);
+            border-left: 4px solid var(--accent-color);
         }
 
         .about-highlights {
@@ -183,7 +199,7 @@
         }
 
         .highlight-item {
-            background: var(--blue);
+            background: var(--card-bg);
             padding: 30px 20px;
             border-radius: 10px;
             transition: var(--transition);
@@ -199,13 +215,19 @@
 
         .highlight-item i {
             font-size: 2.5rem;
-            color: var(--light-blue);
+            color: var(--accent-color);
             margin-bottom: 20px;
         }
 
         .highlight-item h3 {
             font-size: 2rem;
             margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .highlight-item p {
+            color: var(--text);
+            opacity: 0.9;
         }
 
         .about-image {
@@ -217,7 +239,7 @@
             width: 100%;
             max-width: 400px;
             height: 500px;
-            background: linear-gradient(rgb(10 19 23 / 47%), rgb(10 14 23 / 19%)), url(image.jpg);
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 20px;
@@ -234,7 +256,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(74, 95, 138, 0.2), transparent);
+            background: linear-gradient(45deg, transparent, rgba(178, 34, 34, 0.3), transparent);
             transform: translateX(-100%);
         }
 
@@ -244,7 +266,7 @@
 
         /* Experience */
         .experience-section {
-            background: var(--blue);
+            background: var(--dark-bg);
         }
 
         .experience-timeline {
@@ -260,7 +282,7 @@
             bottom: 0;
             left: 50%;
             width: 2px;
-            background: var(--accent-blue);
+            background: var(--accent-bg);
             transform: translateX(-50%);
         }
 
@@ -285,7 +307,7 @@
 
         .timeline-content {
             width: 45%;
-            background: var(--dark-blue);
+            background: var(--card-bg);
             padding: 40px;
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -306,8 +328,8 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: var(--light-blue);
-            border: 4px solid var(--blue);
+            background: var(--accent-color);
+            border: 4px solid var(--section-bg);
         }
 
         .timeline-item:nth-child(odd) .timeline-content::before {
@@ -320,7 +342,7 @@
 
         .timeline-date {
             display: inline-block;
-            background: var(--accent-blue);
+            background: var(--accent-bg);
             color: white;
             padding: 8px 20px;
             border-radius: 20px;
@@ -330,7 +352,7 @@
         }
 
         .timeline-content h3 {
-            color: var(--light-blue);
+            color: var(--accent-color);
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
@@ -339,6 +361,7 @@
             font-size: 1.1rem;
             margin-bottom: 20px;
             opacity: 0.8;
+            color: var(--text);
         }
 
         .timeline-content ul {
@@ -349,13 +372,14 @@
             margin-bottom: 12px;
             position: relative;
             padding-left: 20px;
+            color: var(--text);
         }
 
         .timeline-content li::before {
             content: '▸';
             position: absolute;
             left: 0;
-            color: var(--light-blue);
+            color: var(--accent-color);
         }
 
         .timeline-item:nth-child(even) .timeline-content li {
@@ -371,7 +395,7 @@
 
         /* Skills */
         .skills-section {
-            background: var(--dark-blue);
+            background: var(--section-bg);
         }
 
         .skills-container {
@@ -381,7 +405,7 @@
         }
 
         .skill-category {
-            background: var(--blue);
+            background: var(--card-bg);
             padding: 40px 30px;
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -397,7 +421,7 @@
         }
 
         .skill-category h3 {
-            color: var(--light-blue);
+            color: var(--accent-color);
             margin-bottom: 25px;
             display: flex;
             align-items: center;
@@ -412,22 +436,23 @@
         }
 
         .skill-item {
-            background: var(--accent-blue);
+            background: var(--accent-bg);
             padding: 10px 20px;
             border-radius: 20px;
             font-size: 0.95rem;
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text);
         }
 
         .skill-item:hover {
-            background: var(--light-blue);
+            background: var(--accent-color);
             transform: scale(1.05);
         }
 
         /* Hobbies Section */
         .hobbies-section {
-            background: var(--blue);
+            background: var(--dark-bg);
             padding: 100px 0;
         }
 
@@ -444,7 +469,7 @@
         }
 
         .hobby-item {
-            background: var(--dark-blue);
+            background: var(--card-bg);
             padding: 40px 30px;
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -462,7 +487,7 @@
 
         .hobby-item i {
             font-size: 3rem;
-            color: var(--light-blue);
+            color: var(--accent-color);
             margin-bottom: 25px;
             width: 80px;
             height: 80px;
@@ -475,7 +500,7 @@
         }
 
         .hobby-item h3 {
-            color: var(--light-blue);
+            color: var(--accent-color);
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
@@ -483,11 +508,12 @@
         .hobby-item p {
             opacity: 0.9;
             line-height: 1.6;
+            color: var(--text);
         }
 
         /* Contact */
         .contact-section {
-            background: var(--blue);
+            background: var(--section-bg);
         }
 
         .contact-content {
@@ -497,7 +523,7 @@
         }
 
         .contact-info-card {
-            background: var(--dark-blue);
+            background: var(--card-bg);
             padding: 50px 40px;
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -506,13 +532,14 @@
         .contact-info-card h3 {
             font-size: 2rem;
             margin-bottom: 20px;
-            color: var(--light-blue);
+            color: var(--accent-color);
         }
 
         .contact-info-card > p {
             margin-bottom: 40px;
             font-size: 1.1rem;
             opacity: 0.9;
+            color: var(--text);
         }
 
         .contact-item-large {
@@ -532,7 +559,7 @@
         .contact-item-large i {
             width: 60px;
             height: 60px;
-            background: var(--accent-blue);
+            background: var(--accent-bg);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -543,17 +570,19 @@
         }
 
         .contact-item-large:hover i {
-            background: var(--light-blue);
+            background: var(--accent-color);
             transform: scale(1.1);
         }
 
         .contact-item-large h4 {
             margin-bottom: 5px;
             font-size: 1.2rem;
+            color: var(--text);
         }
 
         .contact-item-large p {
             opacity: 0.9;
+            color: var(--text);
         }
 
         .social-links {
@@ -568,7 +597,7 @@
             justify-content: center;
             width: 50px;
             height: 50px;
-            background: var(--accent-blue);
+            background: var(--accent-bg);
             border-radius: 50%;
             color: white;
             transition: var(--transition);
@@ -576,12 +605,12 @@
         }
 
         .social-links a:hover {
-            background: var(--light-blue);
+            background: var(--accent-color);
             transform: translateY(-5px);
         }
 
         .contact-image {
-            background: linear-gradient(rgba(10, 14, 23, 0.8), rgba(10, 14, 23, 0.8)), url('https://get.pxhere.com/photo/art-blue-sky-black-atmosphere-darkness-electric-blue-cloud-space-night-textile-pattern-meteorological-phenomenon-1587975.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://get.pxhere.com/photo/art-blue-sky-black-atmosphere-darkness-electric-blue-cloud-space-night-textile-pattern-meteorological-phenomenon-1587975.png');
             background-size: cover;
             background-position: center;
             border-radius: 15px;
@@ -600,7 +629,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(74, 95, 138, 0.2), transparent);
+            background: linear-gradient(45deg, transparent, rgba(178, 34, 34, 0.3), transparent);
             transform: translateX(-100%);
         }
 
@@ -617,17 +646,18 @@
         .contact-text h3 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--light-blue);
+            color: var(--accent-color);
         }
 
         .contact-text p {
             font-size: 1.2rem;
             opacity: 0.9;
+            color: var(--text);
         }
 
         /* Footer */
         footer {
-            background: var(--dark-blue);
+            background: #1a0f0f;
             padding: 70px 0 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
@@ -643,13 +673,14 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 20px;
-            color: var(--light-blue);
+            color: var(--accent-color);
         }
 
         .footer-about p {
             margin-bottom: 30px;
             opacity: 0.9;
             line-height: 1.7;
+            color: var(--text);
         }
 
         .footer-contact-info {
@@ -674,19 +705,19 @@
         }
 
         .footer-contact-item a:hover {
-            color: var(--light-blue);
+            color: var(--accent-color);
             transform: translateX(5px);
         }
 
         .footer-contact-item i {
-            color: var(--light-blue);
+            color: var(--accent-color);
             width: 20px;
         }
 
         .footer-links h3 {
             margin-bottom: 25px;
             position: relative;
-            color: var(--light-blue);
+            color: var(--accent-color);
             font-size: 1.3rem;
         }
 
@@ -697,7 +728,7 @@
             left: 0;
             width: 40px;
             height: 2px;
-            background: var(--light-blue);
+            background: var(--accent-color);
         }
 
         .footer-links ul {
@@ -719,11 +750,11 @@
 
         .footer-links a i {
             width: 20px;
-            color: var(--light-blue);
+            color: var(--accent-color);
         }
 
         .footer-links a:hover {
-            color: var(--light-blue);
+            color: var(--accent-color);
             padding-left: 5px;
         }
 
@@ -744,7 +775,7 @@
 
         /* Responsive */
         @media (max-width: 1100px) {
-            .header-content h1 {
+            .glowing-title {
                 font-size: 3.5rem;
             }
             
@@ -803,7 +834,7 @@
         }
 
         @media (max-width: 768px) {
-            .header-content h1 {
+            .glowing-title {
                 font-size: 2.8rem;
             }
 
@@ -825,7 +856,7 @@
         }
 
         @media (max-width: 576px) {
-            .header-content h1 {
+            .glowing-title {
                 font-size: 2.3rem;
             }
             
@@ -869,7 +900,7 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <h1>Евгения Калмурзина</h1>
+            <h1 class="glowing-title">Евгения Калмурзина</h1>
             <p>Личный ассистент / Администратор</p>
             <div class="contact-info">
                 <a href="tel:+79634970042" class="contact-item">
@@ -1166,7 +1197,7 @@
         gsap.registerPlugin(ScrollTrigger);
         
         // Header animations
-        gsap.to('.header-content h1', {
+        gsap.to('.glowing-title', {
             opacity: 1,
             y: 0,
             duration: 1,
