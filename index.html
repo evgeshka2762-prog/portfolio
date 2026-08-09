@@ -523,8 +523,10 @@
 
         .contact-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 60px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .contact-info-card {
@@ -625,6 +627,7 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             overflow: hidden;
+            min-height: 320px;
         }
 
         .contact-image::before {
@@ -669,9 +672,12 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, minmax(250px, 1fr));
             gap: 50px;
             margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .footer-logo {
@@ -1176,43 +1182,6 @@
                 <h2>Контакты</h2>
             </div>
             <div class="contact-content">
-                <div class="contact-info-card">
-                    <h3>Связаться со мной</h3>
-                    <p>Готова к обсуждению возможностей сотрудничества. Отвечаю оперативно!</p>
-                    
-                    <a href="tel:+79634970042" class="contact-item-large">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Телефон</h4>
-                            <p>+7 (963) 497-00-42</p>
-                        </div>
-                    </a>
-                    
-                    <a href="mailto:evgeshka2762@gmail.com" class="contact-item-large">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>evgeshka2762@gmail.com</p>
-                        </div>
-                    </a>
-                    
-                    <a href="https://t.me/eva_fn" target="_blank" class="contact-item-large">
-                        <i class="fab fa-telegram"></i>
-                        <div>
-                            <h4>Telegram</h4>
-                            <p>@eva_fn</p>
-                        </div>
-                    </a>
-                    
-                    <a href="https://vk.ru/id471008240" target="_blank" class="contact-item-large">
-                        <i class="fab fa-vk"></i>
-                        <div>
-                            <h4>VK</h4>
-                            <p>id471008240</p>
-                        </div>
-                    </a>
-                </div>
-                
                 <div class="contact-image">
                     <div class="contact-text">
                         <h3>Готова к сотрудничеству</h3>
@@ -1227,36 +1196,6 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">Евгения Калмурзина</div>
-                    <p>Администратор и организатор с опытом в премиум-сегменте и управлении в колл-центре.</p>
-                    <div class="footer-contact-info">
-                        <div class="footer-contact-item">
-                            <a href="tel:+79634970042">
-                                <i class="fas fa-phone"></i>
-                                <span>+7 (963) 497-00-42</span>
-                            </a>
-                        </div>
-                        <div class="footer-contact-item">
-                            <a href="mailto:evgeshka2762@gmail.com">
-                                <i class="fas fa-envelope"></i>
-                                <span>evgeshka2762@gmail.com</span>
-                            </a>
-                        </div>
-                        <div class="footer-contact-item">
-                            <a href="https://t.me/eva_fn" target="_blank">
-                                <i class="fab fa-telegram"></i>
-                                <span>@eva_fn</span>
-                            </a>
-                        </div>
-                        <div class="footer-contact-item">
-                            <a href="https://vk.ru/id471008240" target="_blank">
-                                <i class="fab fa-vk"></i>
-                                <span>id471008240</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 <div class="footer-links">
                     <h3>Навигация</h3>
                     <ul>
