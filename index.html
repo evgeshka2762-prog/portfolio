@@ -170,7 +170,9 @@
         }
 
         /* About */
-        .about-section {
+        .about-section,
+        .skills-section,
+        .experience-section {
             background: var(--section-bg);
         }
 
@@ -270,9 +272,6 @@
         }
 
         /* Experience */
-        .experience-section {
-            background: var(--dark-bg);
-        }
 
         .experience-timeline {
             position: relative;
@@ -399,9 +398,6 @@
         }
 
         /* Skills */
-        .skills-section {
-            background: var(--section-bg);
-        }
 
         .skills-container {
             display: grid;
@@ -456,7 +452,8 @@
         }
 
         /* Hobbies Section */
-        .hobbies-section {
+        .hobbies-section,
+        .education-section {
             background: var(--dark-bg);
             padding: 100px 0;
         }
@@ -1014,6 +1011,66 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Навыки</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Управление</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">Руководство коллективом</div>
+                        <div class="skill-item">Обучение персонала</div>
+                        <div class="skill-item">Управление личными ассистентами</div>
+                        <div class="skill-item">Мотивация команды</div>
+                        <div class="skill-item">Контроль качества</div>
+                        <div class="skill-item">Приоритизация и контроль задач</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tasks"></i> Организация</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">Организаторские навыки</div>
+                        <div class="skill-item">Time Management</div>
+                        <div class="skill-item">Работа с большим объёмом информации</div>
+                        <div class="skill-item">Ведение документации и архива</div>
+                        <div class="skill-item">Точность и внимательность к деталям</div>
+                        <div class="skill-item">Планирование и координация</div>
+                        <div class="skill-item">Многозадачность</div>
+                        <div class="skill-item">Стрессоустойчивость</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-comments"></i> Коммуникация</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">Деловая переписка</div>
+                        <div class="skill-item">Деловое общение</div>
+                        <div class="skill-item">Клиентский сервис</div>
+                        <div class="skill-item">Коммуникация</div>
+                        <div class="skill-item">Ведение переговоров</div>
+                        <div class="skill-item">Публичные выступления</div>
+                        <div class="skill-item">Взаимодействие с сотрудниками</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop"></i> Технические</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">Пользователь ПК</div>
+                        <div class="skill-item">Администрирование</div>
+                        <div class="skill-item">Работа с офисными программами</div>
+                        <div class="skill-item">Онлайн-платформы</div>
+                        <div class="skill-item">CRM-системы</div>
+                        <div class="skill-item">Работа с учётными системами</div>
+                        <div class="skill-item">Безопасность и конфиденциальность</div>
+                        <div class="skill-item">Графика и дизайн</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
     <section id="experience" class="experience-section">
         <div class="container">
@@ -1090,7 +1147,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="skills-section">
+    <section id="education" class="education-section">
         <div class="container">
             <div class="section-title">
                 <h2>Образование</h2>
@@ -1100,66 +1157,6 @@
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Повар, кондитер</h3>
                     <p>НКПиИТ · Среднее профессиональное образование · 2021 — 2025</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Навыки</h2>
-            </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-users"></i> Управление</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Руководство коллективом</div>
-                        <div class="skill-item">Обучение персонала</div>
-                        <div class="skill-item">Управление личными ассистентами</div>
-                        <div class="skill-item">Мотивация команды</div>
-                        <div class="skill-item">Контроль качества</div>
-                        <div class="skill-item">Приоритизация и контроль задач</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tasks"></i> Организация</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Организаторские навыки</div>
-                        <div class="skill-item">Time Management</div>
-                        <div class="skill-item">Работа с большим объёмом информации</div>
-                        <div class="skill-item">Ведение документации и архива</div>
-                        <div class="skill-item">Точность и внимательность к деталям</div>
-                        <div class="skill-item">Планирование и координация</div>
-                        <div class="skill-item">Многозадачность</div>
-                        <div class="skill-item">Стрессоустойчивость</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-comments"></i> Коммуникация</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Деловая переписка</div>
-                        <div class="skill-item">Деловое общение</div>
-                        <div class="skill-item">Клиентский сервис</div>
-                        <div class="skill-item">Коммуникация</div>
-                        <div class="skill-item">Ведение переговоров</div>
-                        <div class="skill-item">Публичные выступления</div>
-                        <div class="skill-item">Взаимодействие с сотрудниками</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop"></i> Технические</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Пользователь ПК</div>
-                        <div class="skill-item">Администрирование</div>
-                        <div class="skill-item">Работа с офисными программами</div>
-                        <div class="skill-item">Онлайн-платформы</div>
-                        <div class="skill-item">CRM-системы</div>
-                        <div class="skill-item">Работа с учётными системами</div>
-                        <div class="skill-item">Безопасность и конфиденциальность</div>
-                        <div class="skill-item">Графика и дизайн</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1205,9 +1202,9 @@
                     <h3>Навигация</h3>
                     <ul>
                         <li><a href="#about"><i class="fas fa-chevron-right"></i> О себе</a></li>
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Навыки</a></li>
                         <li><a href="#experience"><i class="fas fa-chevron-right"></i> Опыт работы</a></li>
                         <li><a href="#education"><i class="fas fa-chevron-right"></i> Образование</a></li>
-                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Навыки</a></li>
                         <li><a href="#hobbies"><i class="fas fa-chevron-right"></i> Увлечения</a></li>
                         <li><a href="#contact"><i class="fas fa-chevron-right"></i> Контакты</a></li>
                     </ul>
