@@ -195,10 +195,8 @@
             position: absolute;
             font-family: 'Noto Sans KR', sans-serif;
             font-weight: 700;
-            font-size: clamp(4rem, 12vw, 8rem);
             color: rgba(255, 255, 255, 0.045);
             line-height: 1;
-            letter-spacing: 0.04em;
             z-index: 0;
             pointer-events: none;
             user-select: none;
@@ -206,33 +204,39 @@
         }
 
         .about-section::before {
-            content: '힘과 지능';
-            top: 40px;
-            right: 4%;
+            content: '책임';
+            top: 18%;
+            left: -1%;
+            font-size: clamp(5rem, 14vw, 9.5rem);
+            letter-spacing: 0.12em;
+            transform: rotate(-8deg);
         }
 
         .skills-section::before {
-            content: '책임';
-            top: 30px;
-            left: 5%;
+            content: '힘과 지능';
+            top: 55%;
+            right: -4%;
+            font-size: clamp(3.5rem, 10vw, 7rem);
+            letter-spacing: -0.02em;
+            transform: rotate(12deg);
         }
 
         .experience-section::before {
             content: '힘과 지능';
-            bottom: 40px;
-            left: 4%;
-        }
-
-        .education-section::before {
-            content: '책임';
-            top: 20px;
-            right: 6%;
+            bottom: 8%;
+            left: 22%;
+            font-size: clamp(4rem, 11vw, 8rem);
+            letter-spacing: 0.08em;
+            transform: rotate(-3deg);
         }
 
         .hobbies-section::before {
-            content: '힘과 지능';
-            top: 30px;
-            left: 6%;
+            content: '책임';
+            top: 12%;
+            right: 8%;
+            font-size: clamp(4.5rem, 12vw, 8.5rem);
+            letter-spacing: 0.16em;
+            transform: rotate(7deg);
         }
 
         .about-content {
