@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="/portfolio/favicon.png?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -174,6 +174,65 @@
         .skills-section,
         .experience-section {
             background: var(--section-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section > .container,
+        .skills-section > .container,
+        .experience-section > .container,
+        .education-section > .container,
+        .hobbies-section > .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-section::before,
+        .skills-section::before,
+        .experience-section::before,
+        .education-section::before,
+        .hobbies-section::before {
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            font-size: clamp(4rem, 12vw, 8rem);
+            color: rgba(255, 255, 255, 0.045);
+            line-height: 1;
+            letter-spacing: 0.04em;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .about-section::before {
+            content: '힘과 지능';
+            top: 40px;
+            right: 4%;
+        }
+
+        .skills-section::before {
+            content: '책임';
+            top: 30px;
+            left: 5%;
+        }
+
+        .experience-section::before {
+            content: '힘과 지능';
+            bottom: 40px;
+            left: 4%;
+        }
+
+        .education-section::before {
+            content: '책임';
+            top: 20px;
+            right: 6%;
+        }
+
+        .hobbies-section::before {
+            content: '힘과 지능';
+            top: 30px;
+            left: 6%;
         }
 
         .about-content {
@@ -456,6 +515,8 @@
         .education-section {
             background: var(--dark-bg);
             padding: 100px 0;
+            position: relative;
+            overflow: hidden;
         }
 
         .hobbies-container {
